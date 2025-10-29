@@ -1,0 +1,2 @@
+# DMF
+Recently, I have been conducting field experiments. As mentioned in the paper "A data-driven morphological filtering algorithm for digital terrain model generation from airborne LiDAR data", the UI interface of the DMF (Data-driven Morphological Filtering) software is still under development. The fully functional software is expected to be available in early December. Thank you for your attention and support.
