@@ -2,7 +2,8 @@
 Ground filtering algorithms (GFs) are widely used in point cloud processing to generate digital terrain models. To enhance the accuracy and robustness of ground filtering for airborne point clouds, we propose a data-driven morphological filtering algorithm (DMF). DMF begins by identifying near-ground voxel centroids after voxelizing the input point clouds. Next, a digital elevation model is constructed based on the elevation information of these near-ground voxel centroids. A composite morphological filter is then designed to identify ground and non-ground patches within the digital elevation model before labeling their inner near-ground voxel centroids as GF-support nodes. The composite morphological filter is used to recognize non-ground areas with incomplete edge structures depicted in the input point cloud and to correct misclassified areas. Finally, a bidirectional k-dimensional tree search engine is built between the GF-support nodes and the input point cloud to separate ground and non-ground points. Experimental results show that DMF achieves ground filtering accuracy with an average F-score greater than 0.88, demonstrating robustness in generating digital terrain models across various test scenarios. Furthermore, the intermediate outputs of DMF enable instance segmentation of artificial objects in airborne point clouds. 
 ![GA0926](https://github.com/user-attachments/assets/fa48f66d-1233-43f2-adf2-91b795a3be90)
 
-
-The ground filtering results and accuracy of some point clouds using test GFs.
+The ground filtering results and accuracy of some point clouds using test GFs. The FSC means the F-score.
 ![FIG8(0925)](https://github.com/user-attachments/assets/59022fe6-31d7-4f39-8d07-e5eddc7c6eda)
 
+Error distribution in the DTM generated from ground points extracted by the tested GFs. 
+![1-s2 0-S2667393225000213-gr10_lrg](https://github.com/user-attachments/assets/e0dfd7b9-ac0b-4391-aae6-fe867d5801e9)
