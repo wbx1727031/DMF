@@ -1,21 +1,21 @@
 # DMF
 Ground filtering algorithms (GFs) are widely used in point cloud processing to generate digital terrain models. To enhance the accuracy and robustness of ground filtering for airborne point clouds, we propose a data-driven morphological filtering algorithm (DMF).
+
 🧠 How Does DMF Work?
 DMF follows a 5-step superpower workflow to separate ground and non-ground points:
 Voxelization First: Voxelize the input point clouds and identify near-ground voxel centroids.
 DEM Construction: Build a digital elevation model (DEM) using the elevation info of these centroids.
-Composite Morphological Filter: Design a tailor-made filter to spot ground and non-ground patches in the DEM.
+Composite Morphological Filter: Design a tailor-made filter to label ground and non-ground patches in the DEM.
 GF-support Node Labeling: Mark the inner near-ground voxel centroids as GF-support nodes (this step fixes misclassified areas and captures incomplete edge structures!).
 Bidirectional k-d Tree Search: Build a search engine between GF-support nodes and input point clouds to finalize ground/non-ground separation.
+
 📊 Impressive Results
 Experimental tests prove DMF is a rockstar:
 Average F-score > 0.88 for ground filtering accuracy
 Robust performance across various test scenarios
 Bonus: Intermediate outputs enable instance segmentation of artificial objects in airborne point clouds!
 
-image
-🖥️ DMF Software Usage Instructions
-🎯 Core Goal
+DMF Software Usage Instructions
 We provide an EXE program to:
 Lower the threshold for using DMF
 Prevent source code from improper modification and unauthorized commercial use
