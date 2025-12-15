@@ -1,4 +1,4 @@
-**DMF: A Data-Driven Ground Filtering Algorithm for Airborne Point Clouds**
+**DMF: A data-driven morphological filtering algorithm for digital terrain model generation from airborne LiDAR data**
 
 Ground Filtering algorithms (GFs) are widely applied in point cloud processing for digital terrain model (DTM) generation. To enhance the accuracy and robustness of ground filtering for airborne point clouds, we propose a Data-Driven Morphological Filtering (DMF) algorithm.
 
@@ -25,6 +25,14 @@ Experimental verification shows that DMF performs excellently, earning it the ti
 - Strong robustness across multiple test scenarios
 
 - **Added Value**: Intermediate output supports instance segmentation of man-made objects in airborne point clouds
+
+**📚 DOI & References**
+**DOI Information**
+
+This work is registered with DOI: https://doi.org/10.1016/j.ophoto.2025.100102
+
+**References**
+Wu B, Zhou X, Zhao J, et al. A Data-driven Morphological Filtering Algorithm for Digital Terrain Model Generation from Airborne LiDAR Data[J]. ISPRS Open Journal of Photogrammetry and Remote Sensing, 2025: 100102.
 
 **💻 DMF Software User Guide**
 
