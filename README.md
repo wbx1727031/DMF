@@ -4,7 +4,7 @@ Ground Filtering algorithms (GFs) are widely applied in point cloud processing f
 
 🧠 How Does DMF Work?
 
-DMF achieves accurate separation of ground and non-ground points through a 5-step core workflow:
+DMF achieves accurate separation of ground points and non-ground points through a 5-step core workflow:
 
 1. Voxelization Preprocessing: Voxelize the input point cloud and identify near-ground voxel centroids.
 
@@ -32,25 +32,25 @@ We provide an EXE executable program to: lower the threshold for using DMF, and 
 
 🚶 Quick Start Steps
 
-6. Double-click the EXE file to launch the software (no installation required, ready to use 🎉)
+A. Quick Start Steps: Double-click the EXE file to launch the software (no installation required, ready to use 🎉)
 
-7. Select the folder where your point cloud CSV files are stored
+B. Select the folder where your point cloud CSV files are stored
 
-8. Click the "Run" button; the software will automatically traverse and read point cloud files one by one, and execute DMF ground filtering
+C. Click the "Run" button; the software will automatically traverse and read point cloud files one by one, and execute DMF ground filtering
 
-9. Monitor the processing progress in real-time through the status bar at the bottom
+D. Monitor the processing progress in real-time through the status bar at the bottom
 
 ⚙️ Key Notes
 
 - Zero Parameter Tuning: DMF adopts a data-driven mechanism, requiring no manual parameter adjustment
 
-- CSV Format Specifications (MUST FOLLOW!): 
-  The file must follow the (X, Y, Z, ...) format
+- CSV Format Specifications (MUST FOLLOW!): The file must follow the (X, Y, Z, ...) format
 
 - The program only reads the first 3 columns as XYZ coordinates; additional attributes will be automatically ignored
 
 - Intermediate Output Checkbox Function:
-  ✅ Checked: Output intermediate files (non-ground node labeling results) for instance segmentation tasks
+  
+- ✅ Checked: Output intermediate files (non-ground node labeling results) for instance segmentation tasks
 
 - ❌ Unchecked: Only output ground filtering results (default mode)
 
@@ -70,11 +70,12 @@ The DMF algorithm has applied for a Chinese national invention patent (pending a
 
 🔐 Source Code Policy
 
-- This software is free for all users
+- Source Code Policy: This software is free for all users
 
 - To avoid intellectual property disputes, the source code is not publicly available by default
 
 - If you truly need the source code, please contact us and provide a detailed application reason
+
 
 The ground filtering results and accuracy of some point clouds using test GFs. The FSC means the F-score.
 ![FIG8(0925)](https://github.com/user-attachments/assets/59022fe6-31d7-4f39-8d07-e5eddc7c6eda)
