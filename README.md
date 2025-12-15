@@ -1,47 +1,81 @@
-# DMF
-Ground filtering algorithms (GFs) are widely used in point cloud processing to generate digital terrain models. To enhance the accuracy and robustness of ground filtering for airborne point clouds, we propose a data-driven morphological filtering algorithm (DMF).
+DMF: A Data-Driven Ground Filtering Algorithm for Airborne Point Clouds
+
+Ground Filtering algorithms (GFs) are widely applied in point cloud processing for digital terrain model (DTM) generation. To enhance the accuracy and robustness of ground filtering for airborne point clouds, we propose a Data-Driven Morphological Filtering (DMF) algorithm.
 
 🧠 How Does DMF Work?
-DMF follows a 5-step superpower workflow to separate ground and non-ground points:
-Voxelization First: Voxelize the input point clouds and identify near-ground voxel centroids.
-DEM Construction: Build a digital elevation model (DEM) using the elevation info of these centroids.
-Composite Morphological Filter: Design a tailor-made filter to label ground and non-ground patches in the DEM.
-GF-support Node Labeling: Mark the inner near-ground voxel centroids as GF-support nodes (this step fixes misclassified areas and captures incomplete edge structures!).
-Bidirectional k-d Tree Search: Build a search engine between GF-support nodes and input point clouds to finalize ground/non-ground separation.
 
-📊 Impressive Results
-Experimental tests prove DMF is a rockstar:
-Average F-score > 0.88 for ground filtering accuracy
-Robust performance across various test scenarios
-Bonus: Intermediate outputs enable instance segmentation of artificial objects in airborne point clouds!
+DMF achieves accurate separation of ground and non-ground points through a 5-step core workflow:
 
-DMF Software Usage Instructions
-We provide an EXE program to:
-Lower the threshold for using DMF
-Prevent source code from improper modification and unauthorized commercial use
+1. Voxelization Preprocessing: Voxelize the input point cloud and identify near-ground voxel centroids.
+
+2. DEM Construction: Build a Digital Elevation Model (DEM) using the elevation information of near-ground voxel centroids.
+
+3. Composite Morphological Filtering: Design a customized filtering operator to label ground and non-ground patches in the DEM.
+
+4. GF-support Node Labeling: Mark near-ground voxel centroids as GF-support nodes (this step corrects misclassified areas and captures incomplete edge structures).
+
+5. Bidirectional k-d Tree Search: Establish a search mechanism between GF-support nodes and input point clouds to finalize ground/non-ground point separation.
+
+📊 Impressive Experimental Results
+
+Experimental verification shows that DMF performs excellently, earning it the title of "star algorithm" in the field of ground filtering:
+
+- Average F-score for ground filtering accuracy > 0.88
+
+- Strong robustness across multiple test scenarios
+
+- Added Value: Intermediate output supports instance segmentation of man-made objects in airborne point clouds
+
+💻 DMF Software User Guide
+
+We provide an EXE executable program to: lower the threshold for using DMF, and prevent improper modification of the source code and unauthorized commercial use.
+
 🚶 Quick Start Steps
-Double-click the EXE file to launch the software (no installation needed! 🎉)
-Select the folder where your point cloud CSV files are stored
-Click to run the software—it will auto-read point clouds one by one and apply DMF ground filtering
-Check the status bar at the bottom to track processing progress
-⚙️ Key Tips You Can’t Miss
-Zero parameter tuning required: DMF is data-driven, so you don’t need to tweak any settings
-CSV format rule (MUST FOLLOW!):
-The CSV file must be in (X, Y, Z, ...) formatThe program only reads the first three columns as XYZ coordinates—extra attributes are ignored
-Checkbox magic for intermediate outputs:
-✅ Checked: Get the intermediate file (non-ground node label results) for instance segmentation tasks
-❌ Unchecked: Only output ground filtering results (default mode)
+
+6. Double-click the EXE file to launch the software (no installation required, ready to use 🎉)
+
+7. Select the folder where your point cloud CSV files are stored
+
+8. Click the "Run" button; the software will automatically traverse and read point cloud files one by one, and execute DMF ground filtering
+
+9. Monitor the processing progress in real-time through the status bar at the bottom
+
+⚙️ Key Notes
+
+- Zero Parameter Tuning: DMF adopts a data-driven mechanism, requiring no manual parameter adjustment
+
+- CSV Format Specifications (MUST FOLLOW!): 
+  The file must follow the (X, Y, Z, ...) format
+
+- The program only reads the first 3 columns as XYZ coordinates; additional attributes will be automatically ignored
+
+- Intermediate Output Checkbox Function:
+  ✅ Checked: Output intermediate files (non-ground node labeling results) for instance segmentation tasks
+
+- ❌ Unchecked: Only output ground filtering results (default mode)
+
 📁 Free Sample Data
-We’ve prepared sample CSV data to help you prep your own datasets for DMF processing—grab them and test away!
-📞 Support & Legal Stuff
-🆘 Need Help?
-If you run into any issues while using the software, feel free to contact us timely—we’re here to help!
+
+We have prepared CSV-format sample data to help you quickly adapt your own datasets to the DMF processing workflow. Feel free to download and test!
+
+📞 Support & Legal Information
+
+🆘 Technical Support
+
+If you encounter any issues during use, please contact us promptly—we will provide full assistance.
+
 📜 Patent Status
+
 The DMF algorithm has applied for a Chinese national invention patent (pending authorization).
+
 🔐 Source Code Policy
-The software is free for use for all users
-Source code is not shared by default to avoid intellectual property disputes
-If you really need the source code, contact us and provide a detailed application reason
+
+- This software is free for all users
+
+- To avoid intellectual property disputes, the source code is not publicly available by default
+
+- If you truly need the source code, please contact us and provide a detailed application reason
+
 The ground filtering results and accuracy of some point clouds using test GFs. The FSC means the F-score.
 ![FIG8(0925)](https://github.com/user-attachments/assets/59022fe6-31d7-4f39-8d07-e5eddc7c6eda)
 
