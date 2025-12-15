@@ -27,8 +27,8 @@ Experimental verification shows that DMF performs excellently, earning it the ti
 - **Added Value**: Intermediate output supports instance segmentation of man-made objects in airborne point clouds
 
 **📚 DOI & References**
-**DOI Information**
 
+**DOI Information**
 This work is registered with DOI: https://doi.org/10.1016/j.ophoto.2025.100102
 
 **References**
