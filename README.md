@@ -52,7 +52,7 @@ We provide an EXE executable program to: lower the threshold for using DMF, and 
 
 - **Zero Parameter Tuning**: DMF adopts a data-driven mechanism, requiring no manual parameter adjustment.
 
-- **Please ensure that the file flowchart.jpg is saved in the same folder as the software.**
+- **Please ensure that the file 123.jpg is saved in the same folder as the software.**
 
 - **CSV Format Specifications (MUST FOLLOW!)**: The file must follow the (X, Y, Z, ...) format; the program only reads the first 3 columns as XYZ coordinates, and additional attributes will be automatically ignored
 
